@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Alice|Judson:400,700);
+
+* {
+  margin: 0;
+}
+
+#first-photos {
+  background: linear-gradient( to right top, #dcdcdc, #FFFFFF);
+}
+
+#second-photos {
+  background: linear-gradient( to right top, rgba(155, 89, 182, 0.48), rgba(155, 89, 182, 0.78));
+}
+
+#headertext {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 0 10px 10px;
+  color: white;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+}
+
+.subtitle {
+  font-family: 'Alice', serif;
+  font-size: 26px;
+  display: none;
+}
+
+.headerimg {
+  width: 100%;
+}
+
+#details {
+  height: 60vh;
+  background-color: white;
+  margin: 0;
+  top: 0px;
+}
+
+.photo-print {
+  padding: 30;
+  height: 300px;
+  border: 18px solid white;
+  margin: 20px;
+  box-shadow: 1px -1px 2px 0px #EEE, 1px 0px 0px 10px rgb(249, 249, 249), -6px 5px 9px 7px #ccc;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.behind {
+  height: 300px;
+  width: 431.5px;
+  background-color: black;
+  display: inline-block;
+  margin: 20px;
+}
+
+.first {
+  top: 50px;
+  left: 100px;
+  position: absolute;
+}
+
+.second {
+  top: 250px;
+  left: 700px;
+  position: absolute;
+}
+
+.skill {
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  font-size: 24px;
+  display: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+#skills-div, #portfolio-div {
+  top: 250px;
+  left: 700px;
+  position: absolute;
+  background: black;
+}
+
+#second-div {
+  background: transparent;
+}
+
+.contact  {
+  padding: 20px 0 20px 20px;
+  width: 80%;
+  height: 40px;
+  background-color: black;
+  transform: translate(-50%, -120%);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.contact p {
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.contact a {
+  color: #009901;
+  text-decoration: none;
+}
+
+.subhead {
+  transform: translate(-50%, -120%);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 48px;
+}
+
+.skill {
+  color: white;
+}
+
+#aboutme {
+  background-color: white;
+  margin-top: 10px;
+  height: 28vh;
+  padding: 20px 200px 20px 200px;
+  font-family: 'Alice', serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-down {
+  position: absolute;
+  display: block;
+  width: 25px;
+  left: 50%;
+  bottom: 35px;
+  opacity: 0.5;
+}
+
+.label {
+  width: 100px;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  box-shadow: -2px 4px 5px rgba(128, 128, 128, 0.25);
+  border: 2px solid grey;
+  color: grey;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.label:hover {
+  box-shadow: 0px 0px 8px #009901;
+}
+
+#label-first, #label-third {
+  left: 463px;
+  top: 400px;
+}
+
+#label-second, #label-fourth {
+  right: 112px;
+  top: 172px;
+}
+
+#label-third, #label-fourth {
+  box-shadow: -2px 4px 5px rgba(0,0,0,0.2);
+}
+
+#third-img, #fourth-img {
+  box-shadow: 1px -1px 2px 0px #EEE, 1px 0px 0px 10px rgb(249, 249, 249), -6px 5px 9px 7px rgba(0,0,0,0.5);
+}
+
+#about-ian {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  padding: 20px 0 20px 20px;
+  width: 90%;
+  height: 40px;
+  background-color: black;
+  color: #009901;
+  transform: translate(-50%, -60%);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.lrg-img {
+  transform: translate(-50%, -50%);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  border: 8px solid white;
+  background-color: white;
+  max-height: 330px;
+}
+
+.port-title, .port-blurb {
+  color: white;
+  padding: 10px 300px;
+  text-align: center;
+  font-family: 'Alice', serif;
+}
+
+.close {
+  width: 25px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
