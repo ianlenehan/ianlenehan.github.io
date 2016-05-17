@@ -281,9 +281,11 @@
 
 @media only screen and (max-device-width: 480px) {
   .first, .second, .behind, #skills-div, #portfolio-div {
-    left: 10vw;
-    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
     height: 30vh;
+    display: block;
   }
 
   .first {
@@ -300,16 +302,15 @@
 
   .label {
     width: 710px;
-    left: 10vw;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   #label-first, #label-third {
     top: 630px;
-    left: 15vw;
   }
 
   #label-second, #label-fourth {
-    left: 15vw;
     top: 1390px;
   }
 
