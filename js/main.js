@@ -78,17 +78,26 @@ $(document).ready(function () {
     clearInterval(timerID);
   });
 
-  $('#label-second').on('mouseenter', function () {
-    skillsTimer = setInterval(showSkills, 800);
+  /// show skills on enter
 
+  $('#label-second').on('mouseenter', function () {
+    if (item >= skills.length) {
+      item = 0;
+      $('#skills').fadeIn();
+    }
+    skillsTimer = setInterval(showSkills, 800);
+  });
+
+  /// cancel skills on exit
+
+  $('#label-second').on('mouseout', function () {
+    clearInterval(timerID);
   });
 
   var showSkills = function () {
     $('#skills').html(skills[item]);
     item ++;
     if (item === skills.length) {
-      console.log('reached the end');
-      console.log('Item:', item, "Length:", skills.length);
       $('#skills').fadeOut();
       clearInterval(skillsTimer);
       item = 0;
@@ -119,7 +128,7 @@ $(document).ready(function () {
   /// function to open lightbox
 
   var displayLightbox = function() {
-    $('#portfolio-div').append('<div id="overlay"><h3 class="port-title">' + portfolio[counter].title + '</h3><p class="port-blurb">' + portfolio[counter].blurb + '</p><img class="lrg-img" src="' + portfolio[counter].image + '"><p class="links"><a id="weblink" href="' + portfolio[counter].weblink + '">Weblink</a>  |  <a id="github" href="' + portfolio[counter].github + '">Github</a></p>');
+    $('#portfolio-div').append('<div id="overlay"><h3 class="port-title">' + portfolio[counter].title + '</h3><p class="port-blurb">' + portfolio[counter].blurb + '</p><img class="lrg-img" src="' + portfolio[counter].image + '"><p class="links"><a id="weblink" href="' + portfolio[counter].weblink + '" target="_blank">Weblink</a>  |  <a id="github" href="' + portfolio[counter].github + '" target="_blank">Github</a></p>');
      $('#portfolio-div').append('<img class="close" src="media/close.png"></div>');
      $('#portfolio-div').append('<img id="forward" src="media/down.png">');
      $('#portfolio-div').append('<img id="back" src="media/down.png">');

@@ -166,7 +166,7 @@
 }
 
 .label:hover {
-  box-shadow: 0px 0px 8px #009901;
+  box-shadow: 0px 0px 8px #009901 !important;
 }
 
 #label-first, #label-third {
