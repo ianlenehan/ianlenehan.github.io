@@ -31,7 +31,6 @@ $(document).ready(function () {
   /// basic open animation for photo
 
   $('.label').on('mouseenter', function () {
-    alert($(window).width());
     $currentDiv = $(this).parent().find($('.photo-print'));
     if ($(window).width() < 500) {
       $currentDiv.fadeOut();
