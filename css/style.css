@@ -280,42 +280,47 @@
 /*///////////// mobile view ////////////*/
 
 @media only screen and (max-device-width: 480px) {
-  .first, .second, .behind, #skills-div, #portfolio-div {
-    left: 50%;
-    transform: translate(-50%);
-    position: fixed;
-    height: 30vh;
-    display: block;
-  }
+    .first, .second, .behind, #skills-div, #portfolio-div {
+      left: 50%;
+      transform: translate(-50%);
+      position: fixed;
+      height: 30%;
+      display: block;
+    }
 
-  .first {
-    top: 50px;
-  }
+    .first {
+      top: 4%;
+    }
 
-  .second, #skills-div, #portfolio-div {
-    top: 800px;
-  }
+    .second, #skills-div, #portfolio-div {
+      top: 50%;
+    }
 
-  #skills-div, #portfolio-div {
-    width: 710px;
-  }
+    #skills-div, #portfolio-div {
+      width: 70%;
+    }
 
-  .label {
-    width: 710px;
-    left: 50%;
-    transform: translate(-50%);
-  }
+    .label {
+      width: 50%;
+      left: 50% !important;
+      transform: translate(-46%);
+      font-size: 18px;
+    }
 
-  #label-first, #label-third {
-    top: 630px;
-  }
+    #label-first, #label-third {
+      top: 37%;
+    }
 
-  #label-second, #label-fourth {
-    top: 1390px;
-  }
+    #label-second, #label-fourth {
+      top: 83%;
+    }
 
-  #about-me {
-    font-size: 32px;
-  }
+    #about-me {
+      font-size: 32px;
+    }
+
+    .scroll-down {
+      display: none;
+    }
 
 	}

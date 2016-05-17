@@ -31,8 +31,15 @@ $(document).ready(function () {
   /// basic open animation for photo
 
   $('.label').on('mouseenter', function () {
+    alert($(window).width());
     $currentDiv = $(this).parent().find($('.photo-print'));
+    if ($(window).width() < 500) {
+      $currentDiv.fadeOut();
+      console.log('small screen');
+    } else {
+      console.log('big screen');
     $currentDiv.addClass('perspectiveLeft');
+    }
   });
 
   /// basic close animation for photo, except for contact photo
@@ -56,18 +63,6 @@ $(document).ready(function () {
       }, 1500);
     }, 7000);
   });
-
-  /// display skills for skills div
-  //
-  // $('#label-second').on('mouseenter', function() {
-  //   timerID = setInterval(displaySkills, 800);
-  // });
-
-  /// cancel skills timer
-  //
-  // $('#label-second').on('mouseout', function () {
-  //   clearInterval(timerID);
-  // });
 
   /// start about me story on enter
 
