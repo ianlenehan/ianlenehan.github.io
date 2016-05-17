@@ -25,7 +25,7 @@ $(document).ready(function () {
     1: { image: "media/movienight.png", blurb: "Movie Night was built to solve that age-old problem of organising a movie night with your friends. Create your own group, create an event, signal your attendance, add the movie to the event and then rate the event afterwards!", title: 'Movie Night', weblink: "https://movienight-irl.herokuapp.com/", github: "https://github.com/ianlenehan/movienight" },
     2: { image: "media/tictactoe.png", blurb: "Tic Tac Toe was my first web app and was built during week three of the WDI course at General Assembly.", title: 'Tic Tac Toe', weblink: "http://ianlenehan.github.io/tic-tac-toe", github: "https://github.com/ianlenehan/tic-tac-toe" },
     3: { image: "media/glance.png", blurb: "Glance was built on Backbone during group project week. I combined with two others to develop this flash card gameified learning tool.", title: 'Glance', weblink: "http://wdi-glance.herokuapp.com/", github: "https://github.com/ianlenehan/flashcards" },
-    4: { image: "media/BTTF.png", blurb: "After finishing Tic Tac Toe, I had some time and wanted to try out some of my newly acquired jQuery skills, so I built a fin little trivia game based on the Back to the Future movies.", title: 'Back to the Future', weblink: "http://ianlenehan.github.io/BTTF/", github: "https://github.com/ianlenehan/BTTF" },
+    4: { image: "media/BTTF.png", blurb: "After finishing Tic Tac Toe, I had some time and wanted to try out some of my newly acquired jQuery skills, so I built a fun little trivia game based on the Back to the Future movies.", title: 'Back to the Future', weblink: "http://ianlenehan.github.io/BTTF/", github: "https://github.com/ianlenehan/BTTF" },
   };
 
   /// basic open animation for photo

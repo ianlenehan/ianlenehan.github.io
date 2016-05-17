@@ -276,3 +276,30 @@
 #back:hover, #forward:hover, .close:hover, lrg-img:hover, .label:hover {
   cursor: pointer;
 }
+
+/*///////////// mobile view ////////////*/
+
+@media only screen and (max-device-width: 480px) {
+  .first, .second, .behind, #skills-div, #portfolio-div {
+    left: 20vw;
+    position: absolute;
+    height: 30vh;
+  }
+
+  .first {
+    top: 50px;
+  }
+
+  .second, #skills-div, #portfolio-div {
+    top: 800px;
+  }
+
+  #skills-div, #portfolio-div {
+    width: 710px;
+  }
+
+  .label {
+
+  }
+
+	}
