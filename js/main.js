@@ -21,17 +21,21 @@ $(document).ready(function () {
   var counter = 0;
 
   var portfolio = {
-    0: { image: "media/yardsale.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler.", title: "Yard Sale" },
-    1: { image: "media/movienight.png", blurb: "Movie Night was built to solve that age-old problem of organising a movie night with your friends. Create your own group, create an event, signal your attendance, add the movie to the event and then rate the event afterwards!", title: 'Movie Night' },
-    2: { image: "media/tictactoe.png", blurb: "Tic Tac Toe was my first web app and was built during week three of the WDI course at General Assembly.", title: 'Tic Tac Toe' },
-    3: { image: "media/glance.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler.", title: 'Glance' },
-    4: { image: "media/BTTF.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler.", title: 'Back to the Future' },
+    0: { image: "media/yardsale.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler.", title: "Yard Sale", weblink: "https://yardsale-irl.herokuapp.com", github: "https://github.com/ianlenehan/yardsale" },
+    1: { image: "media/movienight.png", blurb: "Movie Night was built to solve that age-old problem of organising a movie night with your friends. Create your own group, create an event, signal your attendance, add the movie to the event and then rate the event afterwards!", title: 'Movie Night', weblink: "https://movienight-irl.herokuapp.com/", github: "https://github.com/ianlenehan/movienight" },
+    2: { image: "media/tictactoe.png", blurb: "Tic Tac Toe was my first web app and was built during week three of the WDI course at General Assembly.", title: 'Tic Tac Toe', weblink: "http://ianlenehan.github.io/tic-tac-toe", github: "https://github.com/ianlenehan/tic-tac-toe" },
+    3: { image: "media/glance.png", blurb: "Glance was built on Backbone during group project week. I combined with two others to develop this flash card gameified learning tool.", title: 'Glance', weblink: "http://wdi-glance.herokuapp.com/", github: "https://github.com/ianlenehan/flashcards" },
+    4: { image: "media/BTTF.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler.", title: 'Back to the Future', weblink: "http://ianlenehan.github.io/BTTF/", github: "https://github.com/ianlenehan/BTTF" },
   };
+
+  /// basic open animation for photo
 
   $('.label').on('mouseenter', function () {
     $currentDiv = $(this).parent().find($('.photo-print'));
     $currentDiv.addClass('perspectiveLeft');
   });
+
+  /// basic close animation for photo, except for contact photo
 
   $('.label').not('#label-third').on('mouseout', function () {
     $currentDiv.addClass('perspectiveLeftRetourn');
@@ -40,6 +44,8 @@ $(document).ready(function () {
       $currentDiv.removeClass('perspectiveLeftRetourn');
     }, 1500);
   });
+
+  /// close contact photo after 7 secs to allow clicking on links
 
   $('#label-third').on('mouseout', function() {
     setTimeout( function () {
@@ -51,13 +57,19 @@ $(document).ready(function () {
     }, 7000);
   });
 
+  /// display skills for skills div
+
   $('#label-second').on('mouseenter', function() {
     timerID = setInterval(displaySkills, 800);
   });
 
+  /// cancel skills timer
+
   $('#label-second').on('mouseout', function () {
     clearInterval(timerID);
   });
+
+  /// start about me story on enter
 
   $('#label-first').on('mouseenter', function () {
     timerID = setInterval(displayAboutIan, 1800);
@@ -66,8 +78,15 @@ $(document).ready(function () {
     }
   });
 
+  /// cancel about me story on mouseout
+
+  $('#label-first').on('mouseout', function () {
+    clearInterval(timerID);
+  });
+
+  /// open portfolio page
+
   $('#label-fourth').on('click', function() {
-    var $template = $('portfolio-template').html();
     $('#portfolio-click-me').fadeOut();
     $('#fourth-img').fadeOut();
     $('#portfolio-div').animate({
@@ -82,17 +101,72 @@ $(document).ready(function () {
     displayLightbox();
   });
 
+  /// function to open lightbox
+
   var displayLightbox = function() {
-    var $img = $('<img>', {
-      "src": portfolio[counter].image,
-      "class": 'lrg-img',
-      "id": counter
-    });
-    $img.appendTo('#portfolio-div');
-    $('#portfolio-div').append('<h3 class="port-title">' + portfolio[counter].title + '<h3>');
-    $('#portfolio-div').append('<p class="port-blurb">' + portfolio[counter].blurb + '</p>');
-    $('#portfolio-div').append('<img class="close" src="media/close.png">');
+    $('#portfolio-div').append('<div id="overlay"><h3 class="port-title">' + portfolio[counter].title + '</h3><p class="port-blurb">' + portfolio[counter].blurb + '</p><img class="lrg-img" src="' + portfolio[counter].image + '"><p class="port-blurb"><a href="' + portfolio[counter].weblink + '">Weblink</a>  |  <a href="' + portfolio[counter].github + '">Github</a>');
+     $('#portfolio-div').append('<img class="close" src="media/close.png"></div>');
+     $('#portfolio-div').append('<img id="forward" src="media/down.png">');
+     $('#portfolio-div').append('<img id="back" src="media/down.png">');
   };
+
+  /// close lightbox
+
+  $('body').on('click', '.close', function () {
+    counter = 0;
+    $('#overlay').remove();
+    $('#forward').remove();
+    $('#back').remove();
+    $('.close').remove();
+    $('#portfolio-div').animate({
+      width: '431.5px',
+      height: '300px',
+      position: 'absolute',
+      top: '250px',
+      left: '700px',
+      margin: '20px',
+      'z-index': 0
+    });
+    $('#portfolio-click-me').fadeIn();
+    $('#fourth-img').fadeIn();
+  });
+
+
+  ////// click to navigate through the portfolio sites
+  /// forward
+
+  $('body').on('click', '#forward', function () {
+    console.log(counter);
+    if (counter >= 5 ) {
+      counter = 0;
+    } else {
+      counter ++;
+    }
+    console.log(counter);
+    $('.port-title').text(portfolio[counter].title);
+    $('.port-blurb').text(portfolio[counter].blurb);
+    $('.lrg-img').attr('src', portfolio[counter].image);
+  });
+
+  /// back
+
+  $('body').on('click', '#back', function () {
+    console.log(counter);
+    if (counter <= 0 ) {
+      counter = 5;
+    } else {
+      counter --;
+    }
+    console.log(counter);
+    $('.port-title').text(portfolio[counter].title);
+    $('.port-blurb').text(portfolio[counter].blurb);
+    $('.lrg-img').attr('src', portfolio[counter].image);
+  });
+
+  var showSkills = function () {
+
+  };
+
 
   var displaySkills = function () {
     var skillIndex = Math.round(Math.random() * 10) + 0;
@@ -116,7 +190,5 @@ $(document).ready(function () {
     $('#about-ian').html(aboutMe[item]);
     item ++;
   };
-
-
 
 });

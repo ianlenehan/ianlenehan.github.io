@@ -86,7 +86,11 @@
   top: 250px;
   left: 700px;
   position: absolute;
-  background: black;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#portfolio-div {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #second-div {
@@ -155,7 +159,7 @@
   text-align: center;
   box-shadow: -2px 4px 5px rgba(128, 128, 128, 0.25);
   border: 2px solid grey;
-  color: grey;
+  color: rgba(0, 0, 0, 0.7);
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
   box-sizing: border-box;
@@ -200,18 +204,33 @@
 .lrg-img {
   transform: translate(-50%, -50%);
   position:absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  border: 8px solid white;
-  background-color: white;
-  max-height: 330px;
+  max-height: 400px;
+  box-shadow: 0px 5px 20px grey;
+  border-radius: 10px;
 }
 
 .port-title, .port-blurb {
-  color: white;
-  padding: 10px 300px;
+  rgba(0, 0, 0, 0.7);
   text-align: center;
   font-family: 'Alice', serif;
+}
+
+.port-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.port-blurb {
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.port-blurb a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .close {
@@ -219,4 +238,31 @@
   position: absolute;
   top: 25px;
   right: 25px;
+}
+
+#overlay {
+  border-radius: 5px;
+  width: 65%;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+#forward {
+  transform: rotate(270deg);
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+}
+
+#back {
+  transform: rotate(90deg);
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+}
+
+#back:hover, #forward:hover, .close:hover, lrg-img:hover, .label:hover {
+  cursor: pointer;
 }
