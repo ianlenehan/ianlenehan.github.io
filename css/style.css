@@ -281,7 +281,7 @@
 
 @media only screen and (max-device-width: 480px) {
   .first, .second, .behind, #skills-div, #portfolio-div {
-    left: 20vw;
+    left: 10vw;
     position: absolute;
     height: 30vh;
   }
@@ -299,7 +299,22 @@
   }
 
   .label {
+    width: 710px;
+    left: 10vw;
+  }
 
+  #label-first, #label-third {
+    top: 630px;
+    left: 15vw;
+  }
+
+  #label-second, #label-fourth {
+    left: 15vw;
+    top: 1390px;
+  }
+
+  #about-me {
+    font-size: 32px;
   }
 
 	}
