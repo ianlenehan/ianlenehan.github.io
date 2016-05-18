@@ -315,6 +315,11 @@
       padding: 10px;
     }
 
+    .photo-print {
+      box-shadow: none;
+      border: 8px solid white;
+    }
+
     #label-first, #label-third {
       top: 40%;
     }

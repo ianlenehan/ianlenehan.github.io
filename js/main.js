@@ -1,6 +1,8 @@
 var timerID;
 var item = 0;
 
+console.log('Oh hey, a little peek under the hood? Give me a call on 0410 872 627 or send me an email aat ianlenehan@me.com if you wish to get in touch. Thanks!');
+
 $(document).ready(function () {
 
 // calling the pagepiling feature
@@ -34,9 +36,7 @@ $(document).ready(function () {
     $currentDiv = $(this).parent().find($('.photo-print'));
     if ($(window).width() < 500) {
       $currentDiv.fadeOut();
-      console.log('small screen');
     } else {
-      console.log('big screen');
     $currentDiv.addClass('perspectiveLeft');
     }
   });
@@ -173,7 +173,6 @@ $(document).ready(function () {
   /// forward
 
   $('body').on('click', '#forward', function () {
-    console.log(counter);
     if (counter >= 4 ) {
       counter = 0;
     } else {
@@ -189,13 +188,11 @@ $(document).ready(function () {
   /// back
 
   $('body').on('click', '#back', function () {
-    console.log(counter);
     if (counter <= 0 ) {
       counter = 4;
     } else {
       counter --;
     }
-    console.log(counter);
     $('.port-title').text(portfolio[counter].title);
     $('.port-blurb').text(portfolio[counter].blurb);
     $('.lrg-img').attr('src', portfolio[counter].image);
@@ -207,7 +204,6 @@ $(document).ready(function () {
   var displaySkills = function () {
     var skillIndex = Math.round(Math.random() * 10) + 0;
     var randomSkill = skills[skillIndex];
-    console.log(skillIndex);
     var left = Math.round(Math.random() * 245) + 10;
     var top = Math.round(Math.random() * 255) + 5;
     counter ++;
