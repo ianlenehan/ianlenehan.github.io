@@ -113,15 +113,28 @@ $(document).ready(function () {
   $('#label-fourth').on('click', function() {
     $('#portfolio-click-me').fadeOut();
     $('#fourth-img').fadeOut();
-    $('#portfolio-div').animate({
-      width: '100vw',
-      height: '100vh',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      margin: 0,
-      'z-index': 100
-    });
+    if ($(window).width() < 500) {
+      $('#portfolio-div').animate({
+        width: '100vw',
+        height: '100vh',
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        margin: 0,
+        'z-index': 100
+      });
+    } else {
+      $('#portfolio-div').animate({
+        width: '100vw',
+        height: '100vh',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        margin: 0,
+        'z-index': 100
+      });
+    }
+
     displayLightbox();
   });
 

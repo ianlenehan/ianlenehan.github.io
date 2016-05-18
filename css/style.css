@@ -280,16 +280,23 @@
 /*///////////// mobile view ////////////*/
 
 @media only screen and (max-device-width: 480px) {
+
+    .photo-print {
+      box-shadow: none;
+      border: 8px solid white;
+    }
+
     .first, .second, .behind, #skills-div, #portfolio-div {
-      left: 50%;
+      left: 45%;
       transform: translate(-50%);
       position: fixed;
       height: 30%;
-      display: block;
+      width: 70%
     }
 
     .first {
       top: 4%;
+      width: 70%;
     }
 
     .second, #skills-div, #portfolio-div {
@@ -303,24 +310,75 @@
     .label {
       width: 50%;
       left: 50% !important;
-      transform: translate(-46%);
-      font-size: 18px;
+      transform: translate(-50%);
+      font-size: 12px;
+      padding: 10px;
     }
 
     #label-first, #label-third {
-      top: 37%;
+      top: 40%;
     }
 
     #label-second, #label-fourth {
-      top: 83%;
+      top: 86%;
     }
 
-    #about-me {
-      font-size: 32px;
+    #aboutme {
+    font-size: 16px;
+    height: 63%;
+    margin-top: 60px;
+    padding: 10px 35px 10px 35px;
+    }
+
+    #details {
+      height: 105%;
+      top: -32px;
+    }
+
+    .main-title {
+      font-size: 24px;
+    }
+
+    .subtitle {
+      font-size: 14px;
     }
 
     .scroll-down {
       display: none;
+    }
+
+    .headerimg {
+      top: 0px;
+    }
+
+    #headertext {
+      position: absolute;
+      top: 22%;
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+      padding: 10px 0 10px 10px;
+      color: black;
+    }
+
+    #about-ian {
+      font-size: 22px;
+    }
+
+    .contact {
+      padding: 10px 0 30px 20px;
+      width: 90%;
+    }
+
+    .lrg-img {
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      max-height: 50%;
+      max-width: 90%;
+      box-shadow: 0px 5px 20px grey;
+      border-radius: 10px;
     }
 
 	}
