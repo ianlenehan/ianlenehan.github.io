@@ -6,7 +6,7 @@
 }
 
 #first-photos {
-  background: linear-gradient( to right top, #dcdcdc, #FFFFFF);
+  background: linear-gradient( to right top, #FFFFFF, #d6d1d1);
 }
 
 #second-photos {
@@ -286,7 +286,7 @@
       border: 8px solid white;
     }
 
-    .first, .second, .behind, #skills-div, #portfolio-div {
+    .first, .second, .behind, #skills-div, #portfolio-div, #third-img, #fourth-img {
       left: 45%;
       transform: translate(-50%);
       position: fixed;
@@ -316,7 +316,7 @@
     }
 
     .photo-print {
-      box-shadow: none;
+      box-shadow: none !important;
       border: 8px solid white;
     }
 
@@ -329,10 +329,10 @@
     }
 
     #aboutme {
-    font-size: 16px;
+    font-size: 14px;
     height: 63%;
     margin-top: 60px;
-    padding: 10px 35px 10px 35px;
+    padding: 25px 35px 10px 35px;
     }
 
     #details {
@@ -373,6 +373,11 @@
     .contact {
       padding: 10px 0 30px 20px;
       width: 90%;
+      top: 100px;
+    }
+
+    .contact p {
+      font-size: 14px;
     }
 
     .lrg-img {
