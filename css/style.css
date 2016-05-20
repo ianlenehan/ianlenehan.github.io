@@ -10,7 +10,7 @@
 }
 
 #second-photos {
-  background: linear-gradient( to right top, rgba(155, 89, 182, 0.48), rgba(155, 89, 182, 0.78));
+  background: linear-gradient( to right top, rgb(206, 175, 219), rgb(178, 127, 199));
 }
 
 #headertext {
@@ -21,15 +21,59 @@
   color: white;
 }
 
-.main-title {
+.main-title, h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 60px;
+  color: white;
 }
 
 .subtitle {
   font-family: 'Alice', serif;
   font-size: 26px;
   display: none;
+  color: white;
+}
+
+h1, h2 {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  font-family: 'Alice', serif;
+  font-size: 26px;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  padding-bottom: 10px;
+}
+
+.summary {
+  text-align: center;
+}
+
+h2.summary {
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  line-height: 25px;
+}
+
+.container-skills, .container-contact, .container-portfolio {
+  flex-grow: 1;
+}
+
+.container-contact ul, #skills-list, #portfolio-list {
+  font-family: 'Alice', serif;
+  list-style: none;
+  padding-left: 0;
 }
 
 .headerimg {
@@ -97,12 +141,12 @@
   background: transparent;
 }
 
-.contact  {
+.contact, .port  {
   padding: 20px 0 20px 20px;
   width: 80%;
   height: 40px;
   background-color: black;
-  transform: translate(-50%, -120%);
+  transform: translate(-50%, -150%);
   position:absolute;
   top: 50%;
   left: 50%;
@@ -118,6 +162,18 @@
 .contact a {
   color: #009901;
   text-decoration: none;
+}
+
+.port {
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.port p {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-align: center;
 }
 
 .subhead {
@@ -275,6 +331,25 @@
 
 #back:hover, #forward:hover, .close:hover, lrg-img:hover, .label:hover {
   cursor: pointer;
+}
+
+.instructions {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 15px grey;
+  border-radius: 5px;
+  width: 300px;
+  position: fixed;
+  top: 30px;
+  right: 230px;
+  padding: 20px;
+  text-align: center;
+}
+
+.instructions:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px black;
 }
 
 /*///////////// mobile view ////////////*/
