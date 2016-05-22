@@ -479,4 +479,16 @@ h2.summary {
       display: none;
     }
 
+    .container-flex {
+      display: block;
+    }
+
+    #photo {
+      display: none;
+    }
+
+    .summary {
+      display: none;
+    }
+
 	}
