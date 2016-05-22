@@ -475,4 +475,8 @@ h2.summary {
       border-radius: 10px;
     }
 
+    .instructions {
+      display: none;
+    }
+
 	}
