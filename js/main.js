@@ -244,7 +244,6 @@ var loadSkills = function () {
 loadSkills();
 
 var loadPortfolio = function () {
-  console.log('hey');
     for (var j = 0; j < 5; j++) {
       $('#portfolio-list').append('<li>' + portfolio[j].title + ': <a href="' + portfolio[j].weblink + '">Weblink</a> | <a href="' + portfolio[j].github + '">Github</a></li>');
     }
