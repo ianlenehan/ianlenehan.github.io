@@ -352,6 +352,15 @@ h2.summary {
   box-shadow: 0px 0px 15px black;
 }
 
+#photo {
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 160px;
+  box-shadow: 0px 0px 7px grey;
+}
+
 /*///////////// mobile view ////////////*/
 
 @media only screen and (max-device-width: 480px) {
