@@ -426,10 +426,12 @@ h2.summary {
 
     .main-title {
       font-size: 24px;
+      color: black;
     }
 
     .subtitle {
       font-size: 14px;
+      color: black;
     }
 
     .scroll-down {
@@ -457,11 +459,11 @@ h2.summary {
     .contact {
       padding: 10px 0 30px 20px;
       width: 90%;
-      top: 100px;
+      top: 72%;
     }
 
     .contact p {
-      font-size: 14px;
+      font-size: 10px;
     }
 
     .lrg-img {
@@ -476,14 +478,6 @@ h2.summary {
     }
 
     .instructions {
-      display: none;
-    }
-
-    .container-flex {
-      display: block;
-    }
-
-    #photo {
       display: none;
     }
 
