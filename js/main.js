@@ -214,22 +214,22 @@ $(document).ready(function () {
   });
 
 
-  var displaySkills = function () {
-    var skillIndex = Math.round(Math.random() * 10) + 0;
-    var randomSkill = skills[skillIndex];
-    var left = Math.round(Math.random() * 245) + 10;
-    var top = Math.round(Math.random() * 255) + 5;
-    counter ++;
-    var divID = 'skill' + counter.toString();
-    $('#skills-div').append('<div class="skill animated" id="'+ divID + '">' + randomSkill + '</div>');
-    var $thisDiv = $(document.getElementById(divID));
-    $thisDiv.css({ left: left, top: top, display: 'inline-block' });
-    setTimeout(function() {
-      $($thisDiv).addClass('vanishOut');
-    }, 2000, function () {
-      $($thisDiv).remove();
-    });
-  };
+  // var displaySkills = function () {
+  //   var skillIndex = Math.round(Math.random() * 10) + 0;
+  //   var randomSkill = skills[skillIndex];
+  //   var left = Math.round(Math.random() * 245) + 10;
+  //   var top = Math.round(Math.random() * 255) + 5;
+  //   counter ++;
+  //   var divID = 'skill' + counter.toString();
+  //   $('#skills-div').append('<div class="skill animated" id="'+ divID + '">' + randomSkill + '</div>');
+  //   var $thisDiv = $(document.getElementById(divID));
+  //   $thisDiv.css({ left: left, top: top, display: 'inline-block' });
+  //   setTimeout(function() {
+  //     $($thisDiv).addClass('vanishOut');
+  //   }, 2000, function () {
+  //     $($thisDiv).remove();
+  //   });
+  // };
 
   $('.instructions').on('click', function () {
     $(this).fadeOut();
@@ -245,7 +245,7 @@ loadSkills();
 
 var loadPortfolio = function () {
     for (var j = 0; j < 5; j++) {
-      $('#portfolio-list').append('<li>' + portfolio[j].title + ': <a href="' + portfolio[j].weblink + '">Weblink</a> | <a href="' + portfolio[j].github + '">Github</a></li>');
+      $('#portfolio-list').append('<li>' + portfolio[j].title + ': <a target="_blank" href="' + portfolio[j].weblink + '">Weblink</a> | <a href="' + portfolio[j].github + '">Github</a></li>');
     }
   };
 
