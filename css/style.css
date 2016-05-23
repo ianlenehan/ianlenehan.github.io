@@ -416,7 +416,7 @@ h2.summary {
     font-size: 14px;
     height: 63%;
     margin-top: 60px;
-    padding: 25px 35px 10px 35px;
+    padding: 25px 55px 10px 35px;
     }
 
     #details {
@@ -448,7 +448,7 @@ h2.summary {
       left: 50%;
       transform: translate(-50%);
       text-align: center;
-      padding: 10px 0 10px 10px;
+      padding: 20px 0 10px 10px;
       color: black;
     }
 
