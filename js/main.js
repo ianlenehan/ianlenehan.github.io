@@ -18,7 +18,7 @@ $(document).ready(function () {
   }, 2000);
 
   var $currentDiv;
-  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "ActiveRecord", "Backbone.js", "Underscore.js", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Stakeholder Management", "Team Management"];
+  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "ActiveRecord", "Backbone.js", "Underscore.js", "React", "Node", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Team Management"];
   var aboutMe = ["I love Web Development.", "I love Photography.", "I love Game of Thrones.", "I mean, who doesn't?", "I play Baseball...", "and Golf.", "Oh and I do CrossFit.", "I love Problem Solving...", "and building things...", "on the web.", "Like this website.", "I'm a proud Irishman...", "who loves a cup of Barry's Tea...", "but I'm an Aussie too.", "Are you still with me?", "That's it for now.", "Thanks for stopping by!"];
   var counter = 0;
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
     0: { image: "media/yardsale.png", blurb: "Yard Sale is my first mobile app, developed for my final project at General Assembly. The app is built on Rails using jQuery Mobile, jQuery, JavaScript, AJAX and of course, Ruby. The app is designed to make the selling and giving away of items amongst local residents much simpler. I plan on learning NativeScript with a view to building this into a native app. Best viewed on Chrome browser on mobile.", title: "Yard Sale", weblink: "https://yardsale-irl.herokuapp.com", github: "https://github.com/ianlenehan/yardsale" },
     2: { image: "media/movienight.png", blurb: "Movie Night was built to solve that age-old problem of organising a movie night with your friends. Create your own group, create an event, signal your attendance, add the movie to the event and then rate the event afterwards! This app was built using Ruby on Rails.", title: 'Movie Night', weblink: "https://movienight-irl.herokuapp.com/", github: "https://github.com/ianlenehan/movienight" },
     3: { image: "media/tictactoe.png", blurb: "Tic Tac Toe was my first web app and was built during week three of the WDI course at General Assembly. This was my first implementation of JavaScript and jQuery.", title: 'Tic Tac Toe', weblink: "http://ianlenehan.github.io/tic-tac-toe", github: "https://github.com/ianlenehan/tic-tac-toe" },
-    1: { image: "media/glance.png", blurb: "Glance was built on Backbone during group project week. I combined with two others to develop this flash card gameified learning tool. It allows users to create cards, create decks, add other user's cards to their decks and to favourite other user's decks.", title: 'Glance', weblink: "http://wdi-glance.herokuapp.com/", github: "https://github.com/ianlenehan/flashcards" },
+    1: { image: "media/glance.png", blurb: "Glance was built on Backbone during group project week. I combined with two others to develop this flash card gameified learning tool. It allows users to create cards, create decks, add other user's cards to their decks and to favourite other user", title: 'Glance', weblink: "http://wdi-glance.herokuapp.com/", github: "https://github.com/ianlenehan/flashcards" },
     4: { image: "media/BTTF.png", blurb: "After finishing Tic Tac Toe, I had some time and wanted to try out some of my newly acquired jQuery skills, so I built a fun little trivia game based on the Back to the Future movies.", title: 'Back to the Future', weblink: "http://ianlenehan.github.io/BTTF/", github: "https://github.com/ianlenehan/BTTF" },
   };
 
@@ -212,24 +212,6 @@ $(document).ready(function () {
     $('.port-blurb').text(portfolio[counter].blurb);
     $('.lrg-img').attr('src', portfolio[counter].image);
   });
-
-
-  // var displaySkills = function () {
-  //   var skillIndex = Math.round(Math.random() * 10) + 0;
-  //   var randomSkill = skills[skillIndex];
-  //   var left = Math.round(Math.random() * 245) + 10;
-  //   var top = Math.round(Math.random() * 255) + 5;
-  //   counter ++;
-  //   var divID = 'skill' + counter.toString();
-  //   $('#skills-div').append('<div class="skill animated" id="'+ divID + '">' + randomSkill + '</div>');
-  //   var $thisDiv = $(document.getElementById(divID));
-  //   $thisDiv.css({ left: left, top: top, display: 'inline-block' });
-  //   setTimeout(function() {
-  //     $($thisDiv).addClass('vanishOut');
-  //   }, 2000, function () {
-  //     $($thisDiv).remove();
-  //   });
-  // };
 
   $('.instructions').on('click', function () {
     $(this).fadeOut();
