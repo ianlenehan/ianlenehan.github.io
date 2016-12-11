@@ -18,7 +18,7 @@ $(document).ready(function () {
   }, 2000);
 
   var $currentDiv;
-  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "ActiveRecord", "Backbone.js", "Underscore.js", "React", "Node", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Team Management"];
+  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "ActiveRecord", "EmberJS", "React", "ReactNative", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Team Management"];
   var aboutMe = ["I love Web Development.", "I love Photography.", "I love Game of Thrones.", "I mean, who doesn't?", "I play Baseball...", "and Golf.", "Oh and I do CrossFit.", "I love Problem Solving...", "and building things...", "on the web.", "Like this website.", "I'm a proud Irishman...", "who loves a cup of Barry's Tea...", "but I'm an Aussie too.", "Are you still with me?", "That's it for now.", "Thanks for stopping by!"];
   var counter = 0;
 
