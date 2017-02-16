@@ -18,7 +18,7 @@ $(document).ready(function () {
   }, 2000);
 
   var $currentDiv;
-  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "ActiveRecord", "EmberJS", "React", "ReactNative", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Team Management"];
+  var skills = ["HTML", "CSS", "JavaScript", "Ruby", "Rails", "EmberJS", "React", "ReactNative", "AJAX", "jQuery", "Regular Expressions", "Project Mangement", "Team Management"];
   var aboutMe = ["I love Web Development.", "I love Photography.", "I love Game of Thrones.", "I mean, who doesn't?", "I play Baseball...", "and Golf.", "Oh and I do CrossFit.", "I love Problem Solving...", "and building things...", "on the web.", "Like this website.", "I'm a proud Irishman...", "who loves a cup of Barry's Tea...", "but I'm an Aussie too.", "Are you still with me?", "That's it for now.", "Thanks for stopping by!"];
   var counter = 0;
 
@@ -28,6 +28,8 @@ $(document).ready(function () {
     3: { image: "media/tictactoe.png", blurb: "Tic Tac Toe was my first web app and was built during week three of the WDI course at General Assembly. This was my first implementation of JavaScript and jQuery.", title: 'Tic Tac Toe', weblink: "http://ianlenehan.github.io/tic-tac-toe", github: "https://github.com/ianlenehan/tic-tac-toe" },
     1: { image: "media/glance.png", blurb: "Glance was built on Backbone during group project week. I combined with two others to develop this flash card gameified learning tool. It allows users to create cards, create decks, add other user's cards to their decks and to favourite other user", title: 'Glance', weblink: "http://wdi-glance.herokuapp.com/", github: "https://github.com/ianlenehan/flashcards" },
     4: { image: "media/BTTF.png", blurb: "After finishing Tic Tac Toe, I had some time and wanted to try out some of my newly acquired jQuery skills, so I built a fun little trivia game based on the Back to the Future movies.", title: 'Back to the Future', weblink: "http://ianlenehan.github.io/BTTF/", github: "https://github.com/ianlenehan/BTTF" },
+    6: { image: "media/flex.png", blurb: "This site was built on the Squarespace platform for fitness business Flex Success.", title: 'Flex Success', weblink: "http://www.flexsuccess.com.au", github: "" },
+    5: { image: "media/andromeda.png", blurb: "Built on the Squarespace platform for consulting business Andromeda Partners, this site also incorporates custom code and custom CSS.", title: 'Andromeda Partners', weblink: "http://www.andromedapartners.com.au", github: "" },
   };
 
   /// basic open animation for photo
@@ -188,7 +190,7 @@ $(document).ready(function () {
   /// forward
 
   $('body').on('click', '#forward', function () {
-    if (counter >= 4 ) {
+    if (counter >= 6 ) {
       counter = 0;
     } else {
       counter ++;
@@ -226,7 +228,7 @@ var loadSkills = function () {
 loadSkills();
 
 var loadPortfolio = function () {
-    for (var j = 0; j < 5; j++) {
+    for (var j = 0; j < 7; j++) {
       $('#portfolio-list').append('<li>' + portfolio[j].title + ': <a target="_blank" href="' + portfolio[j].weblink + '">Weblink</a> | <a href="' + portfolio[j].github + '">Github</a></li>');
     }
   };
