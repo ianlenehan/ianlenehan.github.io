@@ -1,0 +1,10 @@
+.sub {
+  font-style: italic !important;
+  margin-bottom: 40px !important;
+  margin-top: 0px !important;
+}
+
+.bold {
+  font-weight: bold !important;
+  margin-bottom: 0px !important;
+}
